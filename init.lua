@@ -262,6 +262,12 @@ require('telescope').setup {
       },
     },
   },
+  extensions = {
+    fzf = {
+      fuzzy = true,
+      case_mode = 'ignore_case',
+    }
+  },
 }
 
 -- Enable telescope fzf native, if installed
@@ -488,6 +494,7 @@ cmp.setup {
     end, { 'i', 's' }),
   },
   sources = {
+    { name = 'copilot' },
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
   },
