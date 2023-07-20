@@ -9,6 +9,8 @@ vim.opt.smartindent = true
 vim.opt.backspace = { 'indent', 'eol', 'start' }
 vim.opt.cmdheight = 0
 vim.opt.laststatus = 3
+vim.opt.spelllang = 'en_us'
+vim.opt.spell = true
 
 -- [[ Custom Keymaps ]]
 
@@ -33,4 +35,8 @@ vim.keymap.set('i', '<C-b>', '<Left>')
 vim.keymap.set('i', '<C-f>', '<Right>')
 
 -- Lazygit
-vim.keymap.set('n', '<leader>lg', ':lua _lazygit_toggle()<CR>', { desc = 'Lazygit' })
+vim.keymap.set('n', '<leader>lg', ':LazyGit<CR>', { desc = 'Lazygit' })
+
+-- Open In GitHub
+vim.keymap.set('n', '<leader>gr', ':OpenInGHRepo<CR>', { desc = 'Open In GitHub Repository' })
+vim.keymap.set('n', '<leader>gf', ':OpenInGHFile<CR>', { desc = 'Open In GitHub File' })
