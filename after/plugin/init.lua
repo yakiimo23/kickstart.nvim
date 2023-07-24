@@ -40,3 +40,9 @@ vim.keymap.set('n', '<leader>lg', ':LazyGit<CR>', { desc = 'Lazygit' })
 -- Open In GitHub
 vim.keymap.set('n', '<leader>gr', ':OpenInGHRepo<CR>', { desc = 'Open In GitHub Repository' })
 vim.keymap.set('n', '<leader>gf', ':OpenInGHFile<CR>', { desc = 'Open In GitHub File' })
+
+-- Lsp Saga
+vim.keymap.set('n', 'K', ':Lspsaga hover_doc<CR>', { desc = 'Lsp Hover Doc' })
+vim.keymap.set('n', '<leader>ca', ':Lspsaga code_action<CR>', { desc = 'Lsp Code Action' })
+vim.keymap.set('n', '[e', ':Lspsaga diagnostic_jump_next<CR>')
+vim.keymap.set('n', ']e', ':Lspsaga diagnostic_jump_prev<CR>')
