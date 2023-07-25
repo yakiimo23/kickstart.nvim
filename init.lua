@@ -446,6 +446,8 @@ local servers = {
   -- rust_analyzer = {},
   -- tsserver = {},
 
+  ruby_ls = {},
+
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
