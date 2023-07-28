@@ -39,8 +39,8 @@ vim.keymap.set('i', '<C-f>', '<Right>')
 vim.keymap.set('n', '<leader>lg', ':LazyGit<CR>', { desc = 'Lazygit' })
 
 -- Open In GitHub
-vim.keymap.set('n', '<leader>gr', ':OpenInGHRepo<CR>', { desc = 'Open In GitHub Repository' })
-vim.keymap.set('n', '<leader>gf', ':OpenInGHFile<CR>', { desc = 'Open In GitHub File' })
+vim.keymap.set('n', '<leader>ogr', ':OpenInGHRepo<CR>', { desc = 'Open In GitHub Repository' })
+vim.keymap.set('n', '<leader>ogf', ':OpenInGHFile<CR>', { desc = 'Open In GitHub File' })
 
 -- Lsp Saga
 vim.keymap.set('n', 'K', ':Lspsaga hover_doc<CR>', { desc = 'Lsp Hover Doc' })
