@@ -154,7 +154,7 @@ require('lazy').setup({
       },
       sections = {
         lualine_c = {
-          {'filename', file_status = true, path = 3},
+          {'filename', file_status = true, path = 1},
           {'searchcount', maxcount = 999, timeout = 500},
         },
       },
