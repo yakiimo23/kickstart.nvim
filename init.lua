@@ -104,6 +104,15 @@ require('lazy').setup({
 
       -- Adds a number of user-friendly snippets
       'rafamadriz/friendly-snippets',
+
+      -- Adds buffer completion capabilities
+      'hrsh7th/cmp-buffer',
+
+      -- Adds path completion capabilities
+      'hrsh7th/cmp-path',
+
+      -- Adds cmdline completion capabilities
+      'hrsh7th/cmp-cmdline',
     },
   },
 
@@ -538,12 +547,30 @@ cmp.setup {
       end
     end, { 'i', 's' }),
   },
-  sources = {
+  sources = cmp.config.sources({
     { name = 'copilot' },
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
-  },
+  }, {
+    { name = 'buffer' },
+  }),
 }
+
+cmp.setup.cmdline({ '/', '?' }, {
+  mapping = cmp.mapping.preset.cmdline(),
+  sources = {
+    { name = 'buffer' }
+  }
+})
+
+cmp.setup.cmdline(':', {
+  mapping = cmp.mapping.preset.cmdline(),
+  sources = cmp.config.sources({
+    { name = 'path' }
+  }, {
+    { name = 'cmdline' }
+  })
+})
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
