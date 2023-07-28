@@ -132,10 +132,12 @@ require('lazy').setup({
 
   {
     -- Theme inspired by Atom
-    'navarasu/onedark.nvim',
+    -- 'navarasu/onedark.nvim',
+    'ellisonleao/gruvbox.nvim',
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'onedark'
+      vim.o.background = 'dark'
+      vim.cmd.colorscheme 'gruvbox'
     end,
   },
 
@@ -151,7 +153,10 @@ require('lazy').setup({
         section_separators = '',
       },
       sections = {
-        lualine_c = { {'filename', file_status = true, path = 4} },
+        lualine_c = {
+          {'filename', file_status = true, path = 3},
+          {'searchcount', maxcount = 999, timeout = 500},
+        },
       },
     },
   },
