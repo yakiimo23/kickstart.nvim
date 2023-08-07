@@ -97,3 +97,10 @@ require('lspconfig').ruby_ls.setup({
     setup_diagnostics(client, buffer)
   end,
 })
+
+-- RSpec
+vim.keymap.set("n", "<leader>rn", ":RSpecNearest<CR>", { desc = 'RSpec Nearest', noremap = true, silent = true })
+vim.keymap.set("n", "<leader>rf", ":RSpecCurrentFile<CR>", { desc = 'RSpec Current File', noremap = true, silent = true })
+vim.keymap.set("n", "<leader>rr", ":RSpecRerun<CR>", { desc = 'RSpec Rerun', noremap = true, silent = true })
+vim.keymap.set("n", "<leader>rF", ":RSpecOnlyFailures<CR>", { desc = 'RSpec only Failures', noremap = true, silent = true })
+vim.keymap.set("n", "<leader>rs", ":RSpecShowLastResult<CR>", { desc = 'RSpec Show Last Result', noremap = true, silent = true })
