@@ -24,6 +24,10 @@ vim.keymap.set('n', '<leader>ff', ':NvimTreeToggle<CR>', { desc = 'Finder' })
 vim.keymap.set('n', '<C-h>', 'gT', { desc = 'Previous Tab' })
 vim.keymap.set('n', '<C-l>', 'gt', { desc = 'Next Tab' })
 
+-- Buffer next/prev
+vim.keymap.set('n', '<leader>bn', ':bnext<CR>', { desc = 'Next Buffer' })
+vim.keymap.set('n', '<leader>bp', ':bprevious<CR>', { desc = 'Previous Buffer' })
+
 -- Disable highlight after search
 vim.keymap.set('n', '<leader>nn', ':noh<CR>', { desc = 'Disable hignlight' })
 
