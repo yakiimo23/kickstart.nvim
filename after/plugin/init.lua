@@ -15,6 +15,7 @@ vim.opt.foldmethod = 'syntax'
 vim.opt.encoding = 'utf-8'
 vim.opt.fileencodings = { 'utf-8', 'cp932', 'euc-jp', 'sjis' }
 vim.opt.relativenumber = true
+vim.opt.helplang = { 'ja', 'en' }
 
 -- [[ Custom Keymaps ]]
 
